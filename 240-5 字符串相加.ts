@@ -39,13 +39,13 @@ var addStrings = function(num1, num2, base = 10) {
   let n2_length = num2.length - 1
   let scale = 0
 
-  while(n1_length >= 0 || n2_length >= 0){
+  while(n1_length >= 0 || n2_length >= 0) {
     const num = (+num1[n1_length] || 0) + (+num2[n2_length] || 0) + scale;
     scale = num >= base ? 1 : 0;
     res = num % base + res;
     n1_length--;
     n2_length--;
   }
-  return scale > 0 ? '1'+ res : res
+  return scale > 0 ? '1' + res : res
 
 };
